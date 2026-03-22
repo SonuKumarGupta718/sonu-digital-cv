@@ -35,12 +35,12 @@ export default function Contact() {
               <Github size={20} /> GitHub <ArrowUpRight size={16} />
             </a>
             
-            <div className="glass" style={{
+            <a href="tel:+917319731181" className="glass" style={{
               display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1.5rem', borderRadius: '2rem',
-              color: 'var(--text-primary)'
-            }}>
-              <Phone size={20} color="var(--accent-purple)" /> +91-XXXXXXXXXX
-            </div>
+              color: 'var(--text-primary)', transition: 'var(--transition)'
+            }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'} onMouseOut={e => e.currentTarget.style.background = 'var(--glass-bg)'}>
+              <Phone size={20} color="var(--accent-purple)" /> +91-7319731181
+            </a>
           </div>
           
         </div>
