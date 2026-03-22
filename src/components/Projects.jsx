@@ -17,7 +17,7 @@ export default function Projects() {
       tags: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn'],
       github: '#',
       live: '#',
-      image: 'https://images.unsplash.com/photo-1628183204981-b5860471b694?auto=format&fit=crop&q=80&w=800'
+      image: 'https://images.unsplash.com/photo-1586771107445-d3afef0a1140?auto=format&fit=crop&q=80&w=800'
     },
     {
       title: 'UI/UX Marketplace Design',
