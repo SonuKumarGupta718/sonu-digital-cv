@@ -8,21 +8,24 @@ export default function Projects() {
       description: 'Full-stack application to track player stats like runs, wickets, and strike rate. Features a dashboard with charts using Recharts and full CRUD operations. Built with a responsive dark mode UI.',
       tags: ['Spring Boot', 'React', 'Recharts', 'MySQL'],
       github: '#',
-      live: '#'
+      live: '#',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'
     },
     {
       title: 'Crop Recommendation System',
       description: 'Machine learning model predicting the most suitable crop to grow based on various parameters. Trained on the Agri-Crop-Prediction-India dataset using modern Python tools.',
       tags: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn'],
       github: '#',
-      live: '#'
+      live: '#',
+      image: 'https://images.unsplash.com/photo-1628183204981-b5860471b694?auto=format&fit=crop&q=80&w=800'
     },
     {
       title: 'UI/UX Marketplace Design',
       description: 'Designed a high-fidelity mobile application prototype focusing on user-friendly navigation and premium design aesthetics.',
       tags: ['Figma', 'UI/UX Design', 'Prototyping'],
       github: '#',
-      live: '#'
+      live: '#',
+      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800'
     }
   ];
 
@@ -36,26 +39,18 @@ export default function Projects() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem' }}>
           {projects.map((proj, idx) => (
-            <div key={idx} style={{
+            <div key={idx} className="project-card" style={{
               background: 'var(--bg-secondary)',
               borderRadius: '1rem',
               overflow: 'hidden',
               border: '1px solid var(--glass-border)',
-              transition: 'var(--transition)',
               display: 'flex',
               flexDirection: 'column'
              }} 
-             onMouseOver={e => {
-               e.currentTarget.style.transform = 'translateY(-10px)';
-               e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.4)';
-               e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.3)';
-             }}
-             onMouseOut={e => {
-               e.currentTarget.style.transform = 'translateY(0)';
-               e.currentTarget.style.boxShadow = 'none';
-               e.currentTarget.style.borderColor = 'var(--glass-border)';
-             }}
             >
+              <div className="project-image-container">
+                <img src={proj.image} alt={proj.title} className="project-image" />
+              </div>
               <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 600 }}>{proj.title}</h3>
                 

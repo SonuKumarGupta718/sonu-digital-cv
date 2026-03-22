@@ -1,7 +1,17 @@
 import React from 'react';
 import { Code, Server, Database, Wrench } from 'lucide-react';
+import { FaReact, FaJava, FaPython } from 'react-icons/fa';
 
 export default function Skills() {
+  const getIcon = (skillName) => {
+    switch(skillName) {
+      case 'React': return <FaReact size={16} style={{ marginRight: '6px', color: '#61DAFB' }} />;
+      case 'Java': return <FaJava size={16} style={{ marginRight: '6px', color: '#f89820' }} />;
+      case 'Python': return <FaPython size={16} style={{ marginRight: '6px', color: '#3776AB' }} />;
+      default: return null;
+    }
+  };
+
   const skillCategories = [
     {
       title: 'Languages',
@@ -53,6 +63,8 @@ export default function Skills() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                 {category.skills.map((skill, i) => (
                   <span key={i} style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
                     padding: '0.5rem 1rem',
                     background: 'rgba(255, 255, 255, 0.05)',
                     border: '1px solid var(--glass-border)',
@@ -60,6 +72,7 @@ export default function Skills() {
                     fontSize: '0.9rem',
                     color: 'var(--text-secondary)'
                   }}>
+                    {getIcon(skill)}
                     {skill}
                   </span>
                 ))}
