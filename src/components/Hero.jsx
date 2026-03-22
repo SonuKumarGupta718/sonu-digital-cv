@@ -11,7 +11,7 @@ export default function Hero() {
           </h2>
           
           <h1 style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', marginBottom: '1rem', lineHeight: 1.1 }}>
-            Sonu Kumar <span className="gradient-text">Gupta</span>
+            Sonu Kumar Gupta
           </h1>
           
           <h3 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', color: 'var(--text-secondary)', fontWeight: 400, marginBottom: '2rem' }}>
