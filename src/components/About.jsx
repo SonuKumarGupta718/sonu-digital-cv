@@ -14,10 +14,10 @@ export default function About() {
           
           <div style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.8 }}>
             <p style={{ marginBottom: '1.5rem' }}>
-              I am a passionate <strong>B.Tech IT student</strong> at Lovely Professional University, driven by the desire to build robust, scalable applications and extract meaningful insights from data.
+              I am a <strong>B.Tech IT student</strong> at Lovely Professional University, focused on building scalable web applications and solving real-world problems using data.
             </p>
             <p>
-              I pride myself on being an enthusiastic learner and a detail-oriented problem solver. My hands-on experience spans across full-stack development and data science, allowing me to approach software engineering with a holistic mindset.
+              I have hands-on experience in full-stack development and data science, with a strong foundation in problem-solving and system design. I enjoy learning new technologies and applying them to create efficient and practical solutions.
             </p>
           </div>
 
