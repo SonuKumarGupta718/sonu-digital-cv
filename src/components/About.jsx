@@ -28,8 +28,8 @@ export default function About() {
                  <GraduationCap size={24} />
                </div>
                <div>
-                 <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Education</h4>
-                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>B.Tech Information Technology<br/>Lovely Professional University</p>
+                 <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>B.Tech Information Technology</h4>
+                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Lovely Professional University<br/>CGPA: 7.71</p>
                </div>
             </div>
 
