@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +69,27 @@ export default function Navbar() {
             </button>
           </li>
           <li><a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Contact</a></li>
+        </ul>
+
+        {/* Mobile Toggle Button */}
+        <div className="mobile-toggle-btn" style={{ display: 'none', alignItems: 'center', gap: '0.5rem' }}>
+          <button onClick={toggleTheme} style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.5rem', borderRadius: '50%', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', cursor: 'pointer', transition: 'var(--transition)' }}>
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.5rem', background: 'transparent', border: 'none', cursor: 'pointer', zIndex: 100 }}>
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <ul style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', listStyle: 'none', alignItems: 'center', paddingTop: '5rem' }}>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 500 }}>About</a></li>
+          <li><a href="#skills" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 500 }}>Skills</a></li>
+          <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 500 }}>Projects</a></li>
+          <li><a href="#experience" onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 500 }}>Experience</a></li>
+          <li style={{ marginTop: '1rem' }}><a href="#contact" className="btn btn-primary" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
         </ul>
       </div>
     </nav>
