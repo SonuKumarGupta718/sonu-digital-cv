@@ -1,11 +1,18 @@
 import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
 
+import heroImage from '../assets/hero.png';
+
 export default function Hero() {
   return (
     <section id="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px' }}>
       <div className="container">
         <div className="reveal" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+          
+          <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <img src={heroImage} alt="Profile" style={{ width: '180px', height: '180px', borderRadius: '50%', objectFit: 'cover', border: '3px solid var(--accent-blue)', boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)' }} />
+          </div>
+
           <h2 style={{ color: 'var(--accent-blue)', fontSize: '1.25rem', fontWeight: 600, letterSpacing: '2px', marginBottom: '1rem', textTransform: 'uppercase' }}>
             Hello, I am
           </h2>
