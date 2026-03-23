@@ -21,14 +21,14 @@ export default function Contact() {
           </a>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="#" className="glass" style={{
+            <a href="https://www.linkedin.com/in/sonukumargupta718/" target="_blank" rel="noopener noreferrer" className="glass" style={{
               display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1.5rem', borderRadius: '2rem',
               color: 'var(--text-primary)', transition: 'var(--transition)'
             }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'} onMouseOut={e => e.currentTarget.style.background = 'var(--glass-bg)'}>
               <Linkedin size={20} color="#0077b5" /> LinkedIn <ArrowUpRight size={16} />
             </a>
             
-            <a href="#" className="glass" style={{
+            <a href="https://github.com/SonuKumarGupta718" target="_blank" rel="noopener noreferrer" className="glass" style={{
               display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1.5rem', borderRadius: '2rem',
               color: 'var(--text-primary)', transition: 'var(--transition)'
             }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'} onMouseOut={e => e.currentTarget.style.background = 'var(--glass-bg)'}>
